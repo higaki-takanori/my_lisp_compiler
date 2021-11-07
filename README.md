@@ -4,6 +4,8 @@
 
 ruby で書いています。
 
+以下で実行できます。
+
 ```
-ruby
+ruby rlisp.rb sample.lisp
 ```

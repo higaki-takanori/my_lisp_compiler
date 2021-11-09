@@ -1,6 +1,6 @@
 # my lisp compiler
 
-自作の lisp コンパイラ
+自作の lisp コンパイラもどき（インタープリターもどき）
 
 ruby で書いています。
 

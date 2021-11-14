@@ -1,9 +1,13 @@
 require 'pry'
 
 def lambda(code)
+  # maintain various in this code
+  # $hash_set is used to store the hash of variables
+  # $hash_def is used to store the hash of functions
+  # $hash_arg is used to store the hash of argument
   $hash_set = Hash.new if not defined? $hash_set
   $hash_def = Hash.new if not defined? $hash_def
-  $hash_arg = Hash.new 
+  $hash_arg = Hash.new
 
   abstrees = []
   tokens = tokenize(code)
@@ -17,7 +21,7 @@ def lambda(code)
 end
 
 def tokenize(code)
-  # // 正規表現, (a|b|c) "a","b","c"のどれか, \s 空白文字
+  ## // 正規表現, (a|b|c) "a","b","c"のどれか, \s 空白文字
   code.split(/(\s|\(|\))/).select{|e| e !~ /\s/ && e != ""}
 end
 
@@ -106,7 +110,6 @@ def calc_one_operate(exp)
     end
   else
   end
-
 end
 
 file = open(ARGV[0])

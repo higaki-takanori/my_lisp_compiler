@@ -9,6 +9,8 @@
 )
 
 (hoge 'hi')
+(set fuge "hello,lisp")
+(println fuge)
 
 (def fizzbuzz (x)
   (if (= (% x 3) 0) (print 'fizz'))

@@ -1,18 +1,20 @@
 # my lisp compiler
 
-自作の lisp コンパイラもどき（インタープリターもどき）
+自作の lisp コンパイラもどき（インタープリターもどき）です。
 
 ruby で書いています。
 
 以下で実行できます。
 
-```
+```実行コマンド
 ruby rlisp.rb sample.lisp
 ```
 
 ファイル読み込みのみ対応です。
 
-```
+例）
+
+```入力
 (if (= 3 3)
   (println 'same')
   (println 'same')
@@ -38,9 +40,7 @@ ruby rlisp.rb sample.lisp
 (fizzbuzz 15)
 ```
 
-に対する出力は
-
-```
+```出力
 same
 same
 hi
@@ -56,9 +56,14 @@ fizzbuzz
 その際のプログラムの内部を記載すると
 
 ```
+# setで定義した変数の一覧
 $hash_set #{"fuge"=>"\"hello,lisp\""}
 
+# defで定義した関数の一覧
 $hash_def #{"hoge"=>[["x"], [["println", "x"], ["println", "x"]]], "fizzbuzz"=>[["x"], [["if", ["=", ["%", "x", "3"], "0"], ["print", "'fizz'"]], ["if", ["=", ["%", "x", "5"], "0"], ["print", "'buzz'"]], ["println", "nil"]]]}
 
+# defで定義した関数を実行する際に使用する実引数の一覧
 $hash_arg #{"x"=>"15"}
 ```
+
+となります。

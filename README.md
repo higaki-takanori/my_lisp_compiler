@@ -6,8 +6,8 @@ ruby で書いています。
 
 以下で実行できます。
 
-```bash:terminal
-ruby rlisp.rb sample.lisp
+```ruby:terminal
+% ruby rlisp.rb sample.lisp
 ```
 
 ファイル読み込みのみ対応です。
@@ -40,7 +40,7 @@ ruby rlisp.rb sample.lisp
 (fizzbuzz 15)
 ```
 
-```bash:output
+```ruby:output
 same
 same
 hi

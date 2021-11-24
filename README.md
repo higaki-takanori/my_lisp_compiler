@@ -6,7 +6,7 @@ ruby で書いています。
 
 以下で実行できます。
 
-```実行コマンド
+```bash
 ruby rlisp.rb sample.lisp
 ```
 

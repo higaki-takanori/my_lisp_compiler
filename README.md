@@ -6,7 +6,7 @@ ruby で書いています。
 
 以下で実行できます。
 
-```bash
+```bash:terminal
 ruby rlisp.rb sample.lisp
 ```
 
@@ -14,7 +14,7 @@ ruby rlisp.rb sample.lisp
 
 例）
 
-```入力
+```lisp
 (if (= 3 3)
   (println 'same')
   (println 'same')
@@ -40,7 +40,7 @@ ruby rlisp.rb sample.lisp
 (fizzbuzz 15)
 ```
 
-```出力
+```bash:output
 same
 same
 hi

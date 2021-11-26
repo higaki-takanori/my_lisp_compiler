@@ -6,13 +6,14 @@ ruby で書いています。
 
 以下で実行できます。
 
-```ruby:terminal
+```
 % ruby rlisp.rb sample.lisp
 ```
 
 ファイル読み込みのみ対応です。
 
 例）
+入力
 
 ```lisp
 (if (= 3 3)
@@ -40,7 +41,9 @@ ruby で書いています。
 (fizzbuzz 15)
 ```
 
-```ruby:output
+出力
+
+```
 same
 same
 hi
@@ -53,7 +56,7 @@ fizzbuzz
 
 となります。
 
-その際のプログラムの内部を記載すると
+その際のプログラム内のグローバル変数の中身を記載すると
 
 ```
 # setで定義した変数の一覧

@@ -7,7 +7,7 @@ ruby で書いています。
 以下で実行できます。
 
 ```
-% ruby rlisp.rb sample.lisp
+(terminal)% ruby rlisp.rb sample.lisp
 ```
 
 ファイル読み込みのみ対応です。
@@ -60,12 +60,18 @@ fizzbuzz
 
 ```
 # setで定義した変数の一覧
+# 今回はfugeにhello,lispを定義
 $hash_set #{"fuge"=>"\"hello,lisp\""}
 
 # defで定義した関数の一覧
-$hash_def #{"hoge"=>[["x"], [["println", "x"], ["println", "x"]]], "fizzbuzz"=>[["x"], [["if", ["=", ["%", "x", "3"], "0"], ["print", "'fizz'"]], ["if", ["=", ["%", "x", "5"], "0"], ["print", "'buzz'"]], ["println", "nil"]]]}
+# 今回は以下の感じ
+# hoge関数 引数:x 処理:(println x)(println x)
+# fizzbuzz関数 引数:x 処理:(if (= (% x 3) 0) (print 'fizz'))(if (= (% x 5) 0) (print 'buzz'))(println nil)
+$hash_def #{"hoge"=>[["x"], [["println", "x"], ["println", "x"]]],
+            "fizzbuzz"=>[["x"], [["if", ["=", ["%", "x", "3"], "0"], ["print", "'fizz'"]], ["if", ["=", ["%", "x", "5"], "0"], ["print", "'buzz'"]], ["println", "nil"]]]}
 
 # defで定義した関数を実行する際に使用する実引数の一覧
+# 今回は最終的にx=15が代入されている
 $hash_arg #{"x"=>"15"}
 ```
 
